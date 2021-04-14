@@ -371,3 +371,7 @@
   overflow: hidden;
   background: rgba(240, 243, 255, 1);
 }
+.img {
+  position: relative;
+  object-fit: cover;
+}

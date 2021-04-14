@@ -63,6 +63,7 @@ export type PlasmicHomepage__OverridesType = {
   accuracy?: p.Flex<"div">
   howIsTheProductGoingToBenefitTheCompany?: p.Flex<"div">
   frame11?: p.Flex<"div">
+  img?: p.Flex<"img">
 }
 
 export interface DefaultHomepageProps {
@@ -354,6 +355,17 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </div>
+
+          <img
+            data-plasmic-name={"img"}
+            data-plasmic-override={overrides.img}
+            alt={""}
+            className={classNames(defaultcss.img, sty.img)}
+            role={"img"}
+            src={
+              "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2020/09/1600342290create-react-app-start.png" as const
+            }
+          />
         </div>
       </div>
     </React.Fragment>
@@ -379,6 +391,7 @@ const PlasmicDescendants = {
     "accuracy",
     "howIsTheProductGoingToBenefitTheCompany",
     "frame11",
+    "img",
   ],
   frame1: ["frame1"],
   frame2: ["frame2", "eye"],
@@ -403,6 +416,7 @@ const PlasmicDescendants = {
     "howIsTheProductGoingToBenefitTheCompany",
   ],
   frame11: ["frame11"],
+  img: ["img"],
 } as const
 type NodeNameType = keyof typeof PlasmicDescendants
 type DescendantsType<
@@ -426,6 +440,7 @@ type NodeDefaultElementType = {
   accuracy: "div"
   howIsTheProductGoingToBenefitTheCompany: "div"
   frame11: "div"
+  img: "img"
 }
 
 type ReservedPropsType = "variants" | "args" | "overrides"
@@ -501,6 +516,7 @@ export const PlasmicHomepage = Object.assign(
       "howIsTheProductGoingToBenefitTheCompany"
     ),
     frame11: makeNodeComponent("frame11"),
+    img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
